@@ -22,3 +22,17 @@ void setup() {
     pinMode(ledPin,OUTPUT);
     Serial.begin(9600);
 }
+void loop() {
+    int state=digitalRead(touchPin);
+    if(state==1)
+    {
+        digitalWrite(buzzerPin,HIGH); // we use high =1
+        Serial.println("TOUCHED");
+    }
+    else
+    {
+        digitalWrite(buzzerPin,LOW); // we use low = 0
+        Serial.println(" NOT TOUCHED");
+    }
+
+}
