@@ -15,3 +15,10 @@ int touchPin=7;
 int ledPin=13;
 int buzzerPin=13;
 
+void setup() {
+
+
+    pinMode(touchPin,INPUT);
+    pinMode(ledPin,OUTPUT);
+    Serial.begin(9600);
+}
